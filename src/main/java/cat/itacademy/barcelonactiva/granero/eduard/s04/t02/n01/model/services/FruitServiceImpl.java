@@ -3,10 +3,12 @@ package cat.itacademy.barcelonactiva.granero.eduard.s04.t02.n01.model.services;
 import cat.itacademy.barcelonactiva.granero.eduard.s04.t02.n01.model.domain.Fruit;
 import cat.itacademy.barcelonactiva.granero.eduard.s04.t02.n01.model.repository.FruitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class FruitServiceImpl implements FruitService{
 
     @Autowired

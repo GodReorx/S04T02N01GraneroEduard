@@ -9,30 +9,32 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/fruits")
 public class FruitController {
     @Autowired
     FruitService fruitService;
 
-    @GetMapping("/fruits/getOne/{id}")
+    @GetMapping("/getOne/{fruitId}")
     public ResponseEntity<Fruit> getOneFruit(@PathVariable long fruitId){
         return ResponseEntity.ok().body(this.fruitService.getOne(fruitId));
     }
 
-    @GetMapping("/fruits/getAll")
+    @GetMapping("/getAll ")
     public ResponseEntity<List<Fruit>> getAllFruit(){
         return ResponseEntity.ok().body(this.fruitService.getAll());
     }
-    @PostMapping("/fruits/add")
+    @PostMapping("/add")
     public ResponseEntity <Fruit> addFruit (@RequestBody Fruit fruit){
         return ResponseEntity.ok().body(this.fruitService.add(fruit));
     }
 
-    @PutMapping("/fruits/update")
+    @PutMapping("/update")
     public ResponseEntity<Fruit> updateFruit(@RequestBody Fruit fruit){
         return ResponseEntity.ok().body(this.fruitService.update(fruit));
     }
 
-    @DeleteMapping("/fruits/delete/{id}")
+    @DeleteMapping("/delete/{fruitId}")
     public HttpStatus deleteFruit(@PathVariable long fruitId){
         this.fruitService.delete(fruitId);
         return HttpStatus.OK;
