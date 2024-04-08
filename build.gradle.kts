@@ -8,7 +8,7 @@ group = "cat.itacademy.barcelonactiva.granero.eduard.s04.t02.n01"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_22
+	sourceCompatibility = JavaVersion.VERSION_21
 }
 
 repositories {

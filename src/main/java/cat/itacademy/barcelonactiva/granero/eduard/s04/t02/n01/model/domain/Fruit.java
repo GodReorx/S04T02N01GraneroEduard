@@ -7,11 +7,11 @@ import jakarta.persistence.*;
 public class Fruit {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+    private long id;
     @Column(name = "name")
-    String name;
+    private String name;
     @Column(name = "quantityKilos")
-    int quantityKilos;
+    private int quantityKilos;
 
     public Fruit() {
 
@@ -22,11 +22,11 @@ public class Fruit {
         this.quantityKilos = quantityKilos;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
