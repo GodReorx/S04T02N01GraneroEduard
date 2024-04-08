@@ -20,7 +20,7 @@ public class FruitController {
         return ResponseEntity.ok().body(this.fruitService.getOne(fruitId));
     }
 
-    @GetMapping("/getAll ")
+    @GetMapping("/getAll")
     public ResponseEntity<List<Fruit>> getAllFruit(){
         return ResponseEntity.ok().body(this.fruitService.getAll());
     }
